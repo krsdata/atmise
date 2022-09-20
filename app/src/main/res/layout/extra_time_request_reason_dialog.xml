@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/normal"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_12sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:text="Request Extra Time"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeNormal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appcompatImageViewClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        app:srcCompat="@drawable/close" />
+                </RelativeLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:fadingEdge="none">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/rlEventId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEvent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/normal"
+                        android:text="Event Number"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/textIncidentNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_yellow"
+                        android:fontFamily="@font/normal"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:padding="@dimen/_8sdp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/textBlackHint"
+                        android:textSize="@dimen/bodyTextSizeNormal"
+                        android:textStyle="normal" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/rlTMC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/_8sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTMC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/normal"
+                        android:text="TMC Authorization"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/textTMCAutorization"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tvTMC"
+                        android:layout_weight="1"
+                        android:digits="abcdefghijklmnopqrstuvwxyz1234567890 "
+                        android:background="@drawable/rounded_yellow"
+                        android:fontFamily="@font/normal"
+                        android:gravity="center_vertical"
+                        android:inputType="text|textNoSuggestions"
+                        android:padding="@dimen/_8sdp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/textBlackHint"
+                        android:textSize="@dimen/bodyTextSizeNormal"
+                        android:textStyle="normal" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                    android:id="@+id/spinnerStartTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"/>
+
+                <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                    android:id="@+id/spinnerEndTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llExtraTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/_8sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTotalExtraTimetxt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/normal"
+                        android:text="Total Extra Time"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTotalExtraTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tvTMC"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_yellow"
+                        android:fontFamily="@font/normal"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/_8sdp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/textBlackHint"
+                        android:textSize="@dimen/bodyTextSizeNormal"
+                        android:textStyle="normal" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rlSelectYouReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_8sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSelectReason"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_yellow_reason"
+                        android:fontFamily="@font/normal"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Select your Reason"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall"
+                        app:layout_constraintEnd_toStartOf="@+id/textSelectBackground"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textSelectBackground"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/normal"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Write your Reason"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvSelectReason"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp">
+
+                    <com.met.atims_reporter.widget.spinner.Spinner
+                        android:id="@+id/spinnerCancelReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAsterick"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_asterisk" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/textWriteReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@drawable/edit_text_multiline_bg_black"
+                        android:gravity="left"
+                        android:hint="Write your text here"
+                        android:inputType="textMultiLine"
+                        android:lines="5"
+                        android:maxLength="80"
+                        android:padding="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/textBlackHint"
+                        android:textSize="@dimen/bodyTextSizeSmall"
+                        app:fontFamily="@font/normal" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="@drawable/button_black"
+                    android:fontFamily="@font/normal"
+                    android:text="    Submit    "
+                    android:textAllCaps="true"
+                    android:textColor="@color/offWhite"
+                    android:textSize="@dimen/bodyTextSizeNormal"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </ScrollView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

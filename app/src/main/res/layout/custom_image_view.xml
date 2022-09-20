@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/progressDownload"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="0dp"
+            app:cpb_background_progressbar_color="#D8D8D8"
+            app:cpb_background_progressbar_width="5dp"
+            app:cpb_indeterminate_mode="true"
+            app:cpb_progressbar_color="@color/colorAccent"
+            app:cpb_progressbar_width="4dp"
+            app:cpb_round_border="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/progressUpload"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cpb_background_progressbar_color="#D8D8D8"
+            app:cpb_background_progressbar_width="5dp"
+            app:cpb_indeterminate_mode="true"
+            app:cpb_progressbar_color="@color/colorAccent"
+            app:cpb_progressbar_width="4dp"
+            app:cpb_round_border="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

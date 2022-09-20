@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingRight="@dimen/_8sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOperator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_weight=".48"
+                app:fontFamily="@font/normal"
+                android:maxLines="2"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:text="Adjustable Rib joint plier"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/bodyTextSizeSmall" />
+
+            <com.met.atims_reporter.util.DropDownView
+                android:id="@+id/vehicle_Status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".24"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:background="@drawable/rounded_grey_new"
+                android:drawableRight="@drawable/down_arrow"
+                android:enabled="true"
+                android:focusable="false"
+                app:fontFamily="@font/normal"
+                android:gravity="center_vertical"
+                android:hint="Present"
+                android:inputType="text"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/bodyTextSizeSmall"
+                app:popup_height="200" />
+
+            <com.met.atims_reporter.widget.NumberToggle
+                android:id="@+id/numberToggleHowMany"
+                android:layout_width="0dp"
+                android:layout_weight=".28"
+                app:fontFamily="@font/normal"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</layout>

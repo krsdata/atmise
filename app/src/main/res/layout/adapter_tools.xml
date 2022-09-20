@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_tool_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Screw Driver(1)"
+            android:textColor="@color/black"
+            android:textSize="@dimen/bodyTextSizeSmall"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:paddingLeft="@dimen/_6sdp"
+            android:paddingRight="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_6sdp"/>
+    </LinearLayout>
+
+
+</layout>

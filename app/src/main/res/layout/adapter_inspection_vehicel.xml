@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_65sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_24sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textQuestion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_weight=".4"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:text="Vehicle Interior and Exterior Clean"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/bodyTextSizeSmall"
+                    app:fontFamily="@font/normal" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_weight=".11"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Yes"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bodyTextSizeSmall"
+                    app:fontFamily="@font/normal" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_comment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_weight="0.3"
+                    app:srcCompat="@drawable/message" />
+
+                <com.met.atims_reporter.widget.image_view.ImageView
+                    android:id="@+id/text_image"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:scaleType="centerCrop"
+                    android:layout_weight="0.08"
+                    android:layout_gravity="center"
+                    android:src="@android:color/transparent"
+                    app:enableZoom="yes"
+                     />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</layout>

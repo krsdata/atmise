@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="context"
+            type="com.met.atims_reporter.widget.VideoPlayer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.met.atims_reporter.widget.GSYVideoPlayerWidget
+            android:id="@+id/videoPlayer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#123456"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.halilibo.bvpkotlin.BetterVideoPlayer
+            android:id="@+id/videoPlayerForFiles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:bvp_autoPlay="false"
+            app:bvp_disableControls="true"
+            app:bvp_hideControlsOnPlay="true"
+            app:bvp_pauseDrawable="@drawable/bvp_action_pause"
+            app:bvp_playDrawable="@drawable/bvp_action_play"
+            app:bvp_restartDrawable="@drawable/bvp_action_restart"
+            app:bvp_showBottomProgressBar="true"
+            app:bvp_showTotalDuration="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/buttonControlVideoPlayerFiles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="context"
+            type="com.met.atims_reporter.widget.BottomNav" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/motionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutHomeContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{()->context.selectHome(true)}"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayoutFAQContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/viewHomeSelectedBG"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appcompatImageViewHomeUnSelected"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/home_un_selected" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appcompatImageViewHomeSelected"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/appcompatImageViewHomeUnSelected"
+                    app:srcCompat="@drawable/home_selected" />
+
+                <TextView
+                    android:id="@+id/textViewHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:fontFamily="@font/medium"
+                    android:text="HOME"
+                    android:textSize="@dimen/bottomNavTextSize"
+                    android:textColor="@drawable/selector_dash_text_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/appcompatImageViewHomeUnSelected"
+                    app:layout_constraintStart_toStartOf="@+id/appcompatImageViewHomeUnSelected"
+                    app:layout_constraintTop_toBottomOf="@+id/appcompatImageViewHomeUnSelected" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutFAQContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{()->context.selectFAQ(true)}"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayoutReportContainer"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayoutHomeContainer"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/viewFAQSelectedBG"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appcompatImageViewFAQUnSelected"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/faq_un_selected" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appcompatImageViewFAQSelected"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/appcompatImageViewFAQUnSelected"
+                    app:srcCompat="@drawable/faq_selected" />
+
+                <TextView
+                    android:id="@+id/textViewFAQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:fontFamily="@font/medium"
+                    android:text="FAQ"
+                    android:textSize="@dimen/bottomNavTextSize"
+                    android:textColor="@drawable/selector_dash_text_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/appcompatImageViewFAQUnSelected"
+                    app:layout_constraintStart_toStartOf="@+id/appcompatImageViewFAQUnSelected"
+                    app:layout_constraintTop_toBottomOf="@+id/appcompatImageViewFAQUnSelected" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutReportContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{()->context.selectedReport(true)}"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayoutProfileContainer"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayoutFAQContainer"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/viewReportSelectedBG"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appcompatImageViewReportUnSelected"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/report_un_selected" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appcompatImageViewReportSelected"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/appcompatImageViewReportUnSelected"
+                    app:srcCompat="@drawable/report_selected" />
+
+                <TextView
+                    android:id="@+id/textViewReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:fontFamily="@font/medium"
+                    android:text="REPORT"
+                    android:textSize="@dimen/bottomNavTextSize"
+                    android:textColor="@drawable/selector_dash_text_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/appcompatImageViewReportUnSelected"
+                    app:layout_constraintStart_toStartOf="@+id/appcompatImageViewReportUnSelected"
+                    app:layout_constraintTop_toBottomOf="@+id/appcompatImageViewReportUnSelected" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutProfileContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{()->context.selectedProfile(true)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayoutReportContainer"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/viewProfileSelectedBG"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appcompatImageViewProfileUnSelected"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/profile_un_selected" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appcompatImageViewProfileSelected"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/appcompatImageViewProfileUnSelected"
+                    app:srcCompat="@drawable/profile_selected" />
+
+                <TextView
+                    android:id="@+id/textViewProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:fontFamily="@font/medium"
+                    android:text="PROFILE"
+                    android:textSize="@dimen/bottomNavTextSize"
+                    android:textColor="@drawable/selector_dash_text_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/appcompatImageViewProfileUnSelected"
+                    app:layout_constraintStart_toStartOf="@+id/appcompatImageViewProfileUnSelected"
+                    app:layout_constraintTop_toBottomOf="@+id/appcompatImageViewProfileUnSelected" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:padding="@dimen/_16sdp">
+
+                <com.met.atims_reporter.widget.fullwidth.spinner.Spinner
+                    android:id="@+id/spinnerVia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_action_one"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:background="@drawable/dialog_button_first_bg"
+                    android:fontFamily="@font/medium"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/buttonTextSize"
+                    app:layout_constraintStart_toEndOf="@id/button_action_two"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerVia"
+                    app:layout_constraintWidth_percent=".4" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_action_two"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:background="@drawable/dialog_button_second_bg"
+                    android:fontFamily="@font/medium"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/buttonTextSize"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/button_action_one"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerVia"
+                    app:layout_constraintWidth_percent=".4" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

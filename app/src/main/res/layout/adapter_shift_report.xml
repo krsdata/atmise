@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_shift_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:background="@drawable/button_bg_yellow"
+            android:text="01-01-2020 10:00:49 AM"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardElevation="@dimen/_6sdp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/medium"
+                android:text="Shift Details:"
+                android:textColor="#000"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:background="@color/textBlackHint" />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shift Start:"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_shift_st"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:text="01-01-2020 10:00:49 AM"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shift End:"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_shift_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="01-01-2020 08:00:49 PM"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Duration:"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_duration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10 hrs 38 min 49 secs"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleViewIncidentList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+</layout>

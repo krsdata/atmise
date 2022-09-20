@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="context"
+            type="com.met.atims_reporter.ui.add_maintenance_report.AddMaintenanceReport" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        tools:context=".ui.add_maintenance_report.AddMaintenanceReport">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_16sdp">
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/stateSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/contractEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/vehicleSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/vinNoEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerServiceType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextMileage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextServiceCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextLabourHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextLabourMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/vendorSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/maintenanceRequestTypeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.fullwidth.edittext.EditText
+                android:id="@+id/editTextDescriptionOfRepair"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.fullwidth.edittext.EditText
+                android:id="@+id/editTextNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/textViewReceipt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/normal"
+                    android:text="Receipt"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewReceiptPictureContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="16:9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewReceipt">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:onClick="@{()->context.initiatePictureCapture()}">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/appcompatImageViewCameraPlaceHolder"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toTopOf="@+id/textViewTakePicture"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent=".15"
+                            app:srcCompat="@drawable/ic_camera" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewTakePicture"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/normal"
+                            android:gravity="center"
+                            android:text="Tap To Take Photo"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/bodyTextSizeNormal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/appcompatImageViewCameraPlaceHolder" />
+
+                        <com.met.atims_reporter.widget.image_view.ImageView
+                            android:id="@+id/image_camera"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:scaleType="centerCrop"
+                            android:src="@android:color/transparent"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReTakePicture"
+                android:onClick="@{()->context.initiatePictureCapture()}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/normal"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:text="@string/re_take_picture"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bodyTextSizeNormal"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:background="@drawable/button_yellow"
+                android:fontFamily="@font/normal"
+                android:onClick="@{()->context.submit()}"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

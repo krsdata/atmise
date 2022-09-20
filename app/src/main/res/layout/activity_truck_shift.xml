@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_start_shift">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/truckText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48sdp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:text="Vehicle"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/truckText">
+
+                <com.met.atims_reporter.widget.fullwidth.spinner.Spinner
+                    android:id="@+id/truckList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_16sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/tvStartShift"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_below="@+id/truckList"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:background="@drawable/button_black"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:text="Start Shift"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bodyTextSizeNormal" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

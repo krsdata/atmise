@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp">
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerIncidentType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/llIncidentStepOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextLatitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextLongitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerCallAt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerCallStarted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerCallCompleted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerIncidentTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <!--<com.met.atims_reporter.widget.side_by_side.spinner.Spinner
+                android:id="@+id/spinnerIncidentType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />-->
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerRoute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextMileMarker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerDirection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerPropertyDamage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerSecondaryCrashInvolved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerFirstResponder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextFirstResponderUnitNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutRoadSurfaceHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/normal"
+                    android:text="Road Surface"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/bodyTextSizeNormal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_asterisk" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewRoadSurface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutLaneLocationHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/normal"
+                    android:text="Lane Location"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/bodyTextSizeNormal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_asterisk" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewLaneLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerPassengerTransported"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerAssistType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerContacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerVendor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerRamplanes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerNumberOfVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewVehicleInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.fullwidth.edittext.EditText
+                android:id="@+id/editTextComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:visibility="gone" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerTravelLanesBlocked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:visibility="gone"/>
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextLaneRestorationTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:visibility="gone"/>
+
+            <!--<com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextIncidentNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:visibility="gone"/>-->
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/incidentNoLL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/incidentNoTitleTv"
+                    android:layout_weight=".6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/normal"
+                    android:text="Incident No"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/bodyTextSizeNormal"/>
+                <LinearLayout
+                    android:layout_weight=".4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/bg_dark_yellow_border"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/incidentNoPrefixTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:fontFamily="@font/normal"
+                        android:text=""
+                        android:textColor="@color/textBlack"
+                        android:textSize="@dimen/bodyTextSizeNormal"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/incidentNoEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textColor="@color/textBlack"
+                        android:textSize="@dimen/bodyTextSizeNormal"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:background="@drawable/button_black"
+                android:fontFamily="@font/medium"
+                android:text="Next"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+        </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="context"
+            type="com.met.atims_reporter.ui.add_inspection.step_four.AddInspectionStepFour" />
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.add_inspection.step_four.AddInspectionStepFour">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTotalPresent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Tools Presents"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/bodyTextSizeMedium" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/re_tool_present"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTotalMissing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Tools Missing"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/bodyTextSizeMedium" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/re_tool_misssing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTotalBroken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Tools Broken"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/bodyTextSizeMedium" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/re_tool_broken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.met.atims_reporter.widget.list_view.NonScrollExpandableListView
+                android:id="@+id/expListViewSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="@android:color/transparent"
+                android:childIndicatorStart="@null"
+                android:divider="@color/white"
+                android:dividerHeight="0dp"
+                android:fadingEdge="none"
+                android:groupIndicator="@null"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/_8sdp"
+                android:text="Comments"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/bodyTextSizeMedium"
+                android:textStyle="bold"
+                app:fontFamily="@font/normal" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/asterisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                app:srcCompat="@drawable/ic_asterisk" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/edit_text_multiline_bg"
+                android:gravity="top"
+                android:hint=""
+                android:inputType="textMultiLine"
+                android:lines="6"
+                android:maxLength="180"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textCursorDrawable="@drawable/cursor_drawable_yellow"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewInspectionImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:background="@drawable/button_yellow"
+                android:fontFamily="@font/normal"
+                android:text="Submit"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+
+</layout>

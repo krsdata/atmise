@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="context"
+            type="com.met.atims_reporter.core.AtimsSuperActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".core.HungItSuperActivity"
+        tools:showIn="@layout/activity_atims_super">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appcompatImageViewProfileBg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_300sdp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/colorPrimary" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appcompatImageViewSplashBg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutInnerContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appcompatImageViewBack"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:onClick="@{()->context.onBackPressed()}"
+                android:padding="@dimen/_6sdp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/medium"
+                android:text="Title"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/bodyTextSizeNormal"
+                app:layout_constraintBottom_toBottomOf="@+id/appcompatImageViewBack"
+                app:layout_constraintStart_toEndOf="@+id/appcompatImageViewBack"
+                app:layout_constraintTop_toTopOf="@+id/appcompatImageViewBack"
+                app:layout_constraintVertical_bias=".6" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appcompatImageViewNotification"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:onClick="@{()->context.notification()}"
+                app:layout_constraintBottom_toBottomOf="@+id/appcompatImageViewBack"
+                app:layout_constraintEnd_toStartOf="@+id/appcompatImageViewLogout"
+                app:layout_constraintTop_toTopOf="@+id/appcompatImageViewBack"
+                app:srcCompat="@drawable/notification" />
+
+            <TextView
+                android:id="@+id/textViewNotificationCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/notification_count_bg"
+                android:fontFamily="@font/normal"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="@dimen/_1sdp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/notificationTextSize"
+                app:layout_constraintBottom_toBottomOf="@+id/appcompatImageViewNotification"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@+id/appcompatImageViewNotification"
+                app:layout_constraintStart_toEndOf="@+id/appcompatImageViewNotification"
+                app:layout_constraintTop_toTopOf="@+id/appcompatImageViewNotification"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appcompatImageViewLogout"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{()->context.logout()}"
+                app:layout_constraintBottom_toBottomOf="@+id/appcompatImageViewBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/appcompatImageViewBack"
+                app:srcCompat="@drawable/logout" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonSaveProfile"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/buttonHeightExtraLarge"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@drawable/save_profile_button_bg"
+                android:fontFamily="@font/normal"
+                android:onClick="@{()->context.saveProfile()}"
+                android:text="SAVE"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyTextSizeNormal"
+                app:layout_constraintBottom_toBottomOf="@+id/appcompatImageViewBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/appcompatImageViewBack" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonEditProfile"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/buttonHeightExtraLarge"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@drawable/edit_profile_button_bg"
+                android:fontFamily="@font/normal"
+                android:onClick="@{()->context.editProfile()}"
+                android:text="EDIT"
+                android:textColor="@color/textBlack"
+                android:textSize="@dimen/bodyTextSizeNormal"
+                app:layout_constraintBottom_toBottomOf="@+id/appcompatImageViewBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/appcompatImageViewBack" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutAddIncident"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_add_incident"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/_6sdp"
+                android:onClick="@{()->context.addIncident()}"
+                app:layout_constraintBottom_toTopOf="@+id/frameContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/appcompatImageViewBack">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewAddIncident"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:text="+ ADD INCIDENT"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bodyTextSizeSmall"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--<androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewAddIncident"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/add_incident" />-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/_6sdp"
+                android:onClick="@{()->context.cancelSOS()}"
+                app:layout_constraintBottom_toTopOf="@+id/frameContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/appcompatImageViewBack">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bodyTextSizeSmall"
+                    android:textAllCaps="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--<androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewAddIncident"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/add_incident" />-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutAddFuelReport"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@color/black"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{()->context.addFuelReport()}"
+                android:paddingStart="@dimen/_4sdp"
+                app:layout_constraintBottom_toTopOf="@+id/frameContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/appcompatImageViewBack">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewAddFuelReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/normal"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:text="Add Fuel Report"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewAddFuelReport"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/add_incident" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutAddCrashReport"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@color/black"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{()->context.addCrashReport()}"
+                android:paddingStart="@dimen/_4sdp"
+                app:layout_constraintBottom_toTopOf="@+id/frameContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/appcompatImageViewBack">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewAddCrashReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/normal"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:text="Add Crash Report"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewAddCrashReport"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/add_incident" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutAddInspection"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@color/black"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{()->context.addInspection()}"
+                android:paddingStart="@dimen/_4sdp"
+                app:layout_constraintBottom_toTopOf="@+id/frameContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/appcompatImageViewBack">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewAddInspection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/normal"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:text="Add Inspection"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewAddInspection"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/add_incident" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutAddMaintenanceReport"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@color/black"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{()->context.addMaintenanceReport()}"
+                android:paddingStart="@dimen/_4sdp"
+                app:layout_constraintBottom_toTopOf="@+id/frameContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/appcompatImageViewBack">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewAddMaintenanceReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/normal"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:text="Add Maintenance Report"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewAddMaintenanceReport"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/add_incident" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--<androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivAddExtraTimeList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{()->context.addExtraTimeReport()}"
+                app:layout_constraintBottom_toBottomOf="@+id/appcompatImageViewBack"
+                app:layout_constraintEnd_toStartOf="@+id/appCompatImageViewFilterExtraTimeList"
+                app:layout_constraintTop_toTopOf="@+id/appcompatImageViewBack"
+                app:srcCompat="@drawable/add" />-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageViewFilterExtraTimeList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{()->context.showExtraTimeFilterPopUp()}"
+                app:layout_constraintBottom_toBottomOf="@+id/appcompatImageViewBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/appcompatImageViewBack"
+                app:srcCompat="@drawable/filter_extra_time_list" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="appcompatImageViewBack,textViewTitle" />
+
+            <View
+                android:id="@+id/filler"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/frameContainer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toTopOf="@id/filler"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/barrier" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

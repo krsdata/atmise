@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="context"
+            type="com.met.atims_reporter.ui.sos.SOS" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.sos.SOS">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_16sdp"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtOperatorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Operator Name : "
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:textColor="@color/colorGrey2"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOperatorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Gerad Suppa"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+                <View
+                    android:id="@+id/viewOperatorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_below="@+id/txtOperatorName"
+                    android:background="@color/colorGrey"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewOperatorName"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:text="Phone : "
+                    android:textColor="@color/colorGrey2"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewOperatorName"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="1234567890"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+                <View
+                    android:id="@+id/viewPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_below="@+id/txtPhone"
+                    android:background="@color/colorGrey"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTruckNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewPhone"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:text="Vehicle Number : "
+                    android:textColor="@color/colorGrey2"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTruckNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewPhone"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:text="12345"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+                <View
+                    android:id="@+id/viewTruckNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_below="@+id/txtTruckNo"
+                    android:background="@color/colorGrey"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtLat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewTruckNo"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:text="Latitude : "
+                    android:textColor="@color/colorGrey2"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewTruckNo"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text=""
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+                <View
+                    android:id="@+id/viewLat"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_below="@+id/txtLat"
+                    android:background="@color/colorGrey"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtLng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewLat"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:text="Longitude : "
+                    android:textColor="@color/colorGrey2"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewLat"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text=""
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@color/colorGrey"/>
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerSOSReason"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_height="wrap_content"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@color/colorGrey"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tvSend"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:background="@drawable/button_black"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:onClick="@{()->context.clickedSend()}"
+                android:text="Send"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/bodyTextSizeSmall" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

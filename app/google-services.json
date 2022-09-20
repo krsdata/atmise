@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "798416793517",
+    "firebase_url": "https://atims-b2112.firebaseio.com",
+    "project_id": "atims-b2112",
+    "storage_bucket": "atims-b2112.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798416793517:android:213ffae253bacdfe17fb24",
+        "android_client_info": {
+          "package_name": "com.met.atims_reporter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798416793517-1idfi81ok9pi4ln2dbc89t1l6qn7n83c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.met.atims_reporter",
+            "certificate_hash": "4f9656f9e72e895601af77ac4c094996aa2e98de"
+          }
+        },
+        {
+          "client_id": "798416793517-qgaj5bcsr61hhluero6gc3kqhuqimv27.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.met.atims_reporter",
+            "certificate_hash": "9d4b33e2b3e1d98d04879192e02f1a0f266cf934"
+          }
+        },
+        {
+          "client_id": "798416793517-67oesn3pv894r6tlqetligjdf1st2j2n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwLjLP2hPazz-DASpZ3kfnXho1xIKHRzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798416793517-67oesn3pv894r6tlqetligjdf1st2j2n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "798416793517-09g2kuahbrrsfnjfufusogfre3cudi30.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ATIMSTracker"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798416793517:android:98a069d1d8ebc56e17fb24",
+        "android_client_info": {
+          "package_name": "com.met.atims_tracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798416793517-67oesn3pv894r6tlqetligjdf1st2j2n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwLjLP2hPazz-DASpZ3kfnXho1xIKHRzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798416793517-67oesn3pv894r6tlqetligjdf1st2j2n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "798416793517-09g2kuahbrrsfnjfufusogfre3cudi30.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ATIMSTracker"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

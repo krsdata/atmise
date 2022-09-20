@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:padding="@dimen/_8sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVeicleInfoTitle"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/normal"
+                android:text="Vehicle ID"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textVehicelInfovalue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_toRightOf="@+id/tvVeicleInfoTitle"
+                android:fontFamily="@font/normal"
+                android:gravity="center_vertical|right"
+                android:padding="@dimen/_8sdp"
+                android:text="#12586"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bodyTextSizeNormal"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textBlackHint"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDate"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/normal"
+                android:text="Date"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDateInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_toRightOf="@+id/tvDate"
+                android:fontFamily="@font/normal"
+                android:gravity="center_vertical|right"
+                android:padding="@dimen/_8sdp"
+                android:text="03/20/2020"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bodyTextSizeNormal"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textBlackHint"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTime"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/normal"
+                android:text="Time"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTimeInfoValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_toRightOf="@+id/tvTime"
+                android:fontFamily="@font/normal"
+                android:gravity="center_vertical|right"
+                android:padding="@dimen/_8sdp"
+                android:text="10:30:00 AM"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bodyTextSizeNormal"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textBlackHint"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOperator"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/normal"
+                android:text="Operator"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOperatorValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_toRightOf="@+id/tvOperator"
+                android:fontFamily="@font/normal"
+                android:gravity="center_vertical|right"
+                android:padding="@dimen/_8sdp"
+                android:text="Gerad Suppa"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bodyTextSizeNormal"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textBlackHint"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOdmeterReading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/normal"
+                android:text="Odometer Reading"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/asterisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_asterisk"
+                android:layout_toEndOf="@+id/tvOdmeterReading"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_15sdp"/>
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editTextOdoMeterReading"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_yellow"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/asterisk"
+                    android:fontFamily="@font/normal"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:padding="@dimen/_8sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/textBlackHint"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    android:textStyle="normal"
+                    android:hint="1234"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textBlackHint"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnStatPreOps"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_margin="@dimen/_24sdp"
+            android:background="@drawable/button_black"
+            android:fontFamily="@font/medium"
+            android:text="Start Pre Ops"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bodyTextSizeNormal" />
+    </LinearLayout>
+</layout>

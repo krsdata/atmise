@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="context"
+            type="com.met.atims_reporter.ui.inspection_details.one.InspectionDetailsOne" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/offWhite"
+        tools:context=".ui.inspection_details.one.InspectionDetailsOne">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_12sdp"
+                    android:elevation="@dimen/_8sdp"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="@dimen/_8sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_24sdp"
+                            android:fontFamily="@font/medium"
+                            android:text="Inspection Report-"
+                            android:textColor="#000"
+                            android:textSize="@dimen/bodyTextSizeNormal" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_24sdp"
+                            android:background="@color/textBlackHint" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_name_vehicel_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_date_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_24sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Inspected by:"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/text_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_24sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Vehicle ID:"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/text_vehicle_id"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_24sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Date:"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/text_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_24sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Time:"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/text_time"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_24sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Odometer Reading:"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/text_odmeter"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_24sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Insurance Expiry:"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/text_insurance"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_24sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Registration Expiry:"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/text_regis_exp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_24sdp"
+                            android:layout_marginBottom="@dimen/_16sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="State Inspection Expiry:"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/text_state_exp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_24sdp"
+                            android:text="Insurance:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <com.met.atims_reporter.widget.image_view.ImageView
+                            android:id="@+id/imageInsurance"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_200sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_24sdp"
+                            android:text="Registration:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <com.met.atims_reporter.widget.image_view.ImageView
+                            android:id="@+id/imageRegistration"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_200sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_24sdp"
+                            android:text="State Inspection:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <com.met.atims_reporter.widget.image_view.ImageView
+                            android:id="@+id/imageStateInspection"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_200sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_24sdp"
+                            android:text="License:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <com.met.atims_reporter.widget.image_view.ImageView
+                            android:id="@+id/imagePlateNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_200sdp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_12sdp"
+                    android:elevation="@dimen/_8sdp"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="@dimen/_8sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_24sdp"
+                            android:fontFamily="@font/medium"
+                            android:text="Inspection-Vehicle"
+                            android:textColor="#000"
+                            android:textSize="@dimen/bodyTextSizeNormal" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_24sdp"
+                            android:background="@color/textBlackHint" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rl_vehicel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:orientation="vertical" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/bold"
+                    android:onClick="@{()->context.gotoSummary()}"
+                    android:padding="@dimen/_16sdp"
+                    android:text="Summary >>"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="context"
+            type="com.met.atims_reporter.ui.add_crash_report.step_one.AddCrashReportStepOne" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/_8sdp"
+        android:paddingRight="@dimen/_8sdp"
+        tools:context=".ui.add_crash_report.step_one.AddCrashReportStepOne">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/vehicleId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/latitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/longitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".65"
+                    android:text="@string/are_you_injured"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".35"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/areYouInjuredYes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorYellow"
+                        android:checked="true"
+                        android:text="Yes"
+                        app:fontFamily="@font/normal" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/areYouInjuredNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorYellow"
+                        android:text="No"
+                        app:fontFamily="@font/normal" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".65"
+                    android:text="@string/was_anyone"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".35"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/wasAnyOneElseInjuredYes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorYellow"
+                        android:checked="true"
+                        android:text="Yes"
+                        app:fontFamily="@font/normal" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/wasAnyOneElseInjuredNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorYellow"
+                        android:text="No"
+                        app:fontFamily="@font/normal" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayoutHowManyPeopleInjured"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".65"
+                    android:text="How Many People?"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+
+                <com.met.atims_reporter.widget.NumberToggle
+                    android:id="@+id/numberToggleHowMany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".65"
+                    android:text="@string/do_you_contact"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".35"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/didYouContactTmcYes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorYellow"
+
+                        android:text="Yes"
+                        app:fontFamily="@font/normal" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/didYouContactTmcNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorYellow"
+                        android:text="No"
+                        app:fontFamily="@font/normal" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinner_supervisor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/wereYouInTruck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".65"
+                    android:text="Was Your Safety Belt Fastened?"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".35"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/safetyBeltOnYes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorYellow"
+                        android:checked="true"
+                        android:text="Yes"
+                        app:fontFamily="@font/normal" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/safetyBeltOnNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorYellow"
+                        android:text="No"
+                        app:fontFamily="@font/normal" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerPolice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".65"
+                    android:text="Any Property Damaged"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".35"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/anyPropertyDamagedYes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorYellow"
+                        android:checked="true"
+                        android:text="Yes"
+                        app:fontFamily="@font/normal" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/anyPropertyDamagedNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorYellow"
+                        android:text="No"
+                        app:fontFamily="@font/normal" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutThirdPartyVehiclePresent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".65"
+                    android:text="Third party vehicle present"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".35"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/thirdPartyVehicleYes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorYellow"
+                        android:checked="true"
+                        android:text="Yes"
+                        app:fontFamily="@font/normal" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/thirdPartyVehicleNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorYellow"
+                        android:text="No"
+                        app:fontFamily="@font/normal" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:background="@drawable/button_yellow"
+                android:fontFamily="@font/normal"
+                android:onClick="@{()->context.moveToNext()}"
+                android:text="Next"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

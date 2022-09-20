@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewThirdPartyInformationSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/medium"
+            android:text="Third Party Information Set 1:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/bodyTextSizeMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDriverInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/medium"
+            android:text="Driver Info"
+            android:textColor="@color/black"
+            android:textSize="@dimen/bodyTextSizeMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewThirdPartyInformationSet" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutDriverFields"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/edit_text_bg"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingTop="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDriverInfo">
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextDriverName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextDriverLicenseInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextVehicleLicenseInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextInsuranceExpiryDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.Spinner
+                android:id="@+id/spinnerInjuries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPassengerInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/medium"
+            android:text="Passenger Info"
+            android:textColor="@color/black"
+            android:textSize="@dimen/bodyTextSizeMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutDriverFields" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPassengerInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPassengerInfo" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonAddMore"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@drawable/button_yellow"
+            android:fontFamily="@font/normal"
+            android:text="Add More Passengers"
+            android:textColor="@color/offWhite"
+            android:textSize="@dimen/bodyTextSizeNormal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewPassengerInfo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

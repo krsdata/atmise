@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="context"
+            type="com.met.atims_reporter.ui.add_inspection.step_one.AddInspectionStepOne" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.add_inspection.step_one.AddInspectionStepOne">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTruckId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="Vehicle ID"
+                    android:textColor="@color/textBlackHint"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textTruckIdValue"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/edit_text_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:text="#12586"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    android:textStyle="normal"
+                    app:fontFamily="@font/normal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tvTruckId"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    app:srcCompat="@drawable/ic_asterisk" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCurrentMiles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="Current Miles"
+                    android:textColor="@color/textBlackHint"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtCurrentMiles"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:background="@drawable/edit_text_bg"
+                    android:digits="0123456789"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    android:textStyle="normal"
+                    app:fontFamily="@font/normal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tvCurrentMiles"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    app:srcCompat="@drawable/ic_asterisk" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvInsuranceExp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="Insurance exp"
+                    android:textColor="@color/textBlackHint"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textInsuranceExpValue"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/edit_text_bg"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    android:textStyle="normal"
+                    app:fontFamily="@font/normal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tvInsuranceExp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    app:srcCompat="@drawable/ic_asterisk" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRegistrationExp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="Registration exp"
+                    android:textColor="@color/textBlackHint"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textRegistrationExpValue"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/edit_text_bg"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    android:textStyle="normal"
+                    app:fontFamily="@font/normal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tvRegistrationExp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    app:srcCompat="@drawable/ic_asterisk"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvStateInspectionExp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="State Inspection exp"
+                    android:textColor="@color/textBlackHint"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textStateInspectionExpValue"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/edit_text_bg"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    android:textStyle="normal"
+
+                    app:fontFamily="@font/normal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tvStateInspectionExp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    app:srcCompat="@drawable/ic_asterisk" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvInsurance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="Insurance"
+                    android:textColor="@color/textBlackHint"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tvInsurance"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    app:srcCompat="@drawable/ic_asterisk" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewInsuranceContainer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_1sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintDimensionRatio="1:1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_add_insurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appcompatImageViewCameraPlaceHolderInsurance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewTakePictureInsurance"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent=".15"
+                        app:srcCompat="@drawable/ic_camera" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewTakePictureInsurance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/normal"
+                        android:gravity="center"
+                        android:text="Tap To Take Photo"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/bodyTextSizeNormal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appcompatImageViewCameraPlaceHolderInsurance" />
+
+                    <com.met.atims_reporter.widget.image_view.ImageView
+                        android:id="@+id/image_camera_receipt_insurance"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:scaleType="centerCrop"
+                        android:src="@android:color/transparent"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReTakePictureInsurance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/normal"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:text="@string/re_take_picture"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bodyTextSizeNormal"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRegistration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="Registration"
+                    android:textColor="@color/textBlackHint"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tvRegistration"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    app:srcCompat="@drawable/ic_asterisk" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewRegistrationContainer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_1sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintDimensionRatio="1:1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_add_Registration"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appcompatImageViewCameraPlaceHolderRegistration"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewTakePictureRegistration"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent=".15"
+                        app:srcCompat="@drawable/ic_camera" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewTakePictureRegistration"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/normal"
+                        android:gravity="center"
+                        android:text="Tap To Take Photo"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/bodyTextSizeNormal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appcompatImageViewCameraPlaceHolderRegistration" />
+
+                    <com.met.atims_reporter.widget.image_view.ImageView
+                        android:id="@+id/image_camera_registration"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:scaleType="centerCrop"
+                        android:src="@android:color/transparent"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReTakePictureRegistration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/normal"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:text="@string/re_take_picture"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bodyTextSizeNormal"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvStateInspection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="State Inspection"
+                    android:textColor="@color/textBlackHint"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tvStateInspection"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    app:srcCompat="@drawable/ic_asterisk" />
+            </RelativeLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewStateInspectionContainer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_1sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintDimensionRatio="1:1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_add_StateInspection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appcompatImageViewCameraPlaceHolderStateInspection"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewTakePictureStateInspection"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent=".15"
+                        app:srcCompat="@drawable/ic_camera" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewTakePictureStateInspection"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/normal"
+                        android:gravity="center"
+                        android:text="Tap To Take Photo"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/bodyTextSizeNormal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appcompatImageViewCameraPlaceHolderStateInspection" />
+
+                    <com.met.atims_reporter.widget.image_view.ImageView
+                        android:id="@+id/image_camera_StateInspection"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:scaleType="centerCrop"
+                        android:src="@android:color/transparent"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReTakePictureInspector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/normal"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:text="@string/re_take_picture"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bodyTextSizeNormal"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLicensePlate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="License Plate"
+                    android:textColor="@color/textBlackHint"
+                    android:textSize="@dimen/bodyTextSizeNormal"
+                    app:fontFamily="@font/normal" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tvLicensePlate"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    app:srcCompat="@drawable/ic_asterisk" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewPictureContainer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_1sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintDimensionRatio="1:1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_add_receipt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appcompatImageViewCameraPlaceHolder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewTakePicture"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent=".15"
+                        app:srcCompat="@drawable/ic_camera" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewTakePicture"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/normal"
+                        android:gravity="center"
+                        android:text="Tap To Take Photo"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/bodyTextSizeNormal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appcompatImageViewCameraPlaceHolder" />
+
+                    <com.met.atims_reporter.widget.image_view.ImageView
+                        android:id="@+id/image_camera_receipt"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:scaleType="centerCrop"
+                        android:src="@android:color/transparent"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReTakePictureLicensePlate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/normal"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:text="@string/re_take_picture"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bodyTextSizeNormal"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/button_yellow"
+                android:onClick="@{()->context.moveToNext()}"
+                android:text="Next"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/bodyTextSizeNormal"
+                app:fontFamily="@font/normal" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="context"
+            type="com.met.atims_reporter.ui.dashboard.Dashboard" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.dashboard.Dashboard">
+
+        <include
+            android:id="@+id/content"
+            layout="@layout/content_dashboard"
+            tools:context="@{context}" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

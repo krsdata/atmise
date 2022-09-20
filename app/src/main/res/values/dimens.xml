@@ -1,0 +1,24 @@
+<resources>
+    <dimen name="buttonHeight">@dimen/_40sdp</dimen>
+    <dimen name="buttonHeightLarge">@dimen/_25sdp</dimen>
+    <dimen name="buttonHeightExtraLarge">@dimen/_25sdp</dimen>
+    <dimen name="editTextHeight">@dimen/_36sdp</dimen>
+    <dimen name="editTextHeightLarge">@dimen/_46sdp</dimen>
+    <dimen name="editTextInputSizeLarge">@dimen/_26ssp</dimen>
+    <dimen name="editTextHeightExtraLarge">@dimen/_46sdp</dimen>
+    <dimen name="editTextInputSizeExtraLarge">@dimen/_26ssp</dimen>
+    <dimen name="editTextWidth">@dimen/_70sdp</dimen>
+    <dimen name="pageTitleTextSize">@dimen/_16ssp</dimen>
+    <dimen name="bodyTextSizeMedium">@dimen/_16ssp</dimen>
+    <dimen name="bodyTextSizeNormal">@dimen/_14ssp</dimen>
+    <dimen name="bodyTextSizeSmall">@dimen/_12ssp</dimen>
+    <dimen name="bodyTextSizeExtraSmall">@dimen/_10ssp</dimen>
+    <dimen name="notificationTextSize">@dimen/_12ssp</dimen>
+    <dimen name="inputFieldTextSmall">@dimen/_12ssp</dimen>
+    <dimen name="modalTextSizeNormal">@dimen/_12ssp</dimen>
+    <dimen name="buttonTextSize">@dimen/_12ssp</dimen>
+    <dimen name="logoSize">@dimen/_40ssp</dimen>
+    <dimen name="bodyTextSizeExtraLarge">@dimen/_32ssp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="bottomNavTextSize">@dimen/_8ssp</dimen>
+</resources>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutInd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/normal"
+                        android:text="Ind#:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/Ind"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/normal"
+                        android:text="42047"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutStartTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/normal"
+                        android:text="Start Time:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/normal"
+                        android:text="10:30 AM"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutVehicleId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/normal"
+                        android:text="Vehicle ID:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textVehicelId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/normal"
+                        android:text="WB12568"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutStateName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/normal"
+                        android:text="State:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_state"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/normal"
+                        android:text="Chipley"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutRoute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/normal"
+                        android:text="Route:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_route"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/normal"
+                        android:text="Interstate"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutMM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/normal"
+                        android:text="MM:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_mm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/normal"
+                        android:text="256"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutDirection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/normal"
+                        android:text="Direction:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_direction"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/normal"
+                        android:text="North Bound"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutLanesEffected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/normal"
+                        android:text="Lanes Effected:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_lanes_effected"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/normal"
+                        android:text="All Lanes Open"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/normal"
+                        android:text="Status:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:padding="@dimen/_4sdp"
+                        android:fontFamily="@font/normal"
+                        android:background="@color/green"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/bodyTextSizeSmall" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/buttonUpdateIncident"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/buttonHeight"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:background="@drawable/button_yellow"
+                        android:fontFamily="@font/normal"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:text="Arrived On Scene"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/bodyTextSizeExtraSmall" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/buttonAccept"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/buttonHeight"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:background="@drawable/button_green"
+                        android:fontFamily="@font/normal"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:text="  Accept  "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/bodyTextSizeExtraSmall" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/buttonDecline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/buttonHeight"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:background="@drawable/button_red"
+                        android:fontFamily="@font/normal"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:text="  Decline  "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/bodyTextSizeExtraSmall" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/buttonClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/buttonHeight"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:background="@drawable/button_red"
+                        android:fontFamily="@font/normal"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:text="  Close Incident  "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/bodyTextSizeExtraSmall" />
+
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvViewIncident"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/normal"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="VIEW INCIDENT"
+                    android:gravity="center"
+                    android:padding="@dimen/_12sdp"
+                    android:background="@drawable/button_black_bottom_round"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bodyTextSizeSmall" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="context"
+            type="com.met.atims_reporter.ui.profile.ProfileFragment" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/userDetailsContainer"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="@drawable/bg_yellow_round_bottom"/>
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:id="@+id/coordinatorLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_centerInParent="true">
+
+                    <com.met.atims_reporter.widget.image_view.ImageView
+                        android:id="@+id/ivProfileImage"
+                        android:layout_width="@dimen/_56sdp"
+                        android:layout_height="@dimen/_56sdp"
+                        android:layout_gravity="center" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivCamera"
+                        android:layout_width="@dimen/_48sdp"
+                        android:layout_height="@dimen/_48sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:layout_marginRight="@dimen/_16sdp"
+                        android:layout_marginBottom="@dimen/_16sdp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="@{()->context.initiatePictureCapture()}"
+                        android:src="@drawable/ic_profile_cam"
+                        android:visibility="gone"
+                        app:layout_anchor="@+id/ivProfileImage"
+                        app:layout_anchorGravity="center_horizontal|right" />
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/_16sdp"
+                android:paddingRight="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_16sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userDetailsContainer">
+
+                <com.met.atims_reporter.widget.fullwidth.edittext.EditText
+                    android:id="@+id/firstName"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/editTextHeightExtraLarge"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/lastName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="@dimen/_10ssp"/>
+
+                <com.met.atims_reporter.widget.fullwidth.edittext.EditText
+                    android:id="@+id/lastName"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/editTextHeightExtraLarge"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/firstName"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.met.atims_reporter.widget.fullwidth.edittext.EditText
+                    android:id="@+id/email"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/editTextHeightExtraLarge"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/firstName"/>
+
+                <com.met.atims_reporter.widget.fullwidth.edittext.EditText
+                    android:id="@+id/mobileNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/editTextHeightExtraLarge"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/email"/>
+
+                <com.met.atims_reporter.widget.fullwidth.edittext.EditText
+                    android:id="@+id/address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mobileNumber"/>
+
+                <com.met.atims_reporter.widget.fullwidth.edittext.EditText
+                    android:id="@+id/city"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/editTextHeightExtraLarge"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/pinCode"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/address"/>
+
+                <com.met.atims_reporter.widget.fullwidth.edittext.EditText
+                    android:id="@+id/pinCode"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/editTextHeightExtraLarge"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/city"
+                    app:layout_constraintTop_toBottomOf="@+id/address"
+                    android:textSize="@dimen/editTextInputSizeExtraLarge"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnChangePassword"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_marginLeft="@dimen/_34sdp"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:layout_marginRight="@dimen/_34sdp"
+                    android:background="@drawable/button_black"
+                    android:fontFamily="@font/medium"
+                    android:onClick="@{()->context.changePassword()}"
+                    android:text="CHANGE PASSWORD"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bodyTextSizeSmall"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pinCode" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

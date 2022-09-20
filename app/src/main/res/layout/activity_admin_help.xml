@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:gravity="center_vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Subject"
+                android:textColor="@color/colorGrey2"
+                android:textSize="@dimen/bodyTextSizeSmall" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_asterisk"
+                android:layout_toEndOf="@+id/tvNotes"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:background="@drawable/rounded_yellow"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:padding="@dimen/_16sdp"
+            android:textColor="@color/textBlack"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/bodyTextSizeSmall" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/videoLayout"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_12sdp">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/messageTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Message"
+                android:textColor="@color/colorGrey2"
+                android:textSize="@dimen/bodyTextSizeSmall" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_asterisk"
+                android:layout_toEndOf="@+id/messageTv"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:background="@drawable/rounded_yellow"
+            android:gravity="top"
+            android:hint=""
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:maxLength="100"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textCursorDrawable="@drawable/cursor_drawable_grey"
+            android:textSize="@dimen/bodyTextSizeSmall" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tvSend"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_below="@+id/edtNotes"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:background="@drawable/button_black"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:text="Send"
+            android:textColor="@color/offWhite"
+            android:textSize="@dimen/bodyTextSizeNormal"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+
+
+</layout>

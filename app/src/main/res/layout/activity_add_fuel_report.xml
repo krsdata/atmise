@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp">
+
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/text_vehicelId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerFuelTypes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/editTextOdoMeterReadings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/textCostPerLtr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/edFuelQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.edittext.EditText
+                android:id="@+id/textTotalCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerTankType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+
+            <com.met.atims_reporter.widget.fullwidth.edittext.EditText
+                android:id="@+id/edtComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:inputType="textMultiLine" />
+
+            <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+                android:id="@+id/spinnerReceiptOrPump"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddReceipt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/normal"
+                android:text="Add Receipt"
+                android:textColor="@color/textBlack"
+                android:textSize="@dimen/bodyTextSizeNormal"
+                android:visibility="gone" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewPictureContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_1sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintDimensionRatio="16:9">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_add_receipt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appcompatImageViewCameraPlaceHolder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewTakePicture"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent=".15"
+                        app:srcCompat="@drawable/ic_camera" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewTakePicture"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/normal"
+                        android:gravity="center"
+                        android:text="Tap To Take Photo"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/bodyTextSizeNormal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appcompatImageViewCameraPlaceHolder" />
+
+                    <com.met.atims_reporter.widget.image_view.ImageView
+                        android:id="@+id/image_camera_receipt"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:scaleType="centerCrop"
+                        android:src="@android:color/transparent"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReTakePicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/normal"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:text="@string/re_take_picture"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bodyTextSizeNormal"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_no_receipt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:buttonTint="@color/colorPrimary"
+                android:text="No Receipt Available"
+                android:textColor="@color/textBlack"
+                android:textSize="@dimen/bodyTextSizeNormal"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:background="@drawable/button_yellow"
+                android:fontFamily="@font/normal"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

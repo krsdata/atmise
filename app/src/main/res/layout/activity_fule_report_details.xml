@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.fuel_report_details.FuleReportDetailsActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_12sdp"
+                android:elevation="@dimen/_8sdp"
+                app:cardCornerRadius="@dimen/_8sdp"
+                app:cardElevation="@dimen/_8sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:fontFamily="@font/medium"
+                        android:text="Fuel Report:"
+                        android:textColor="#000"
+                        android:textSize="@dimen/bodyTextSizeNormal" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_24sdp"
+                        android:background="@color/textBlackHint" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_24sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/normal"
+                            android:text="Vehicle ID:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewVehicleId"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.6"
+                            android:fontFamily="@font/normal"
+                            android:text="1485"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_24sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/normal"
+                            android:text="Fuel Type:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textFuelType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.6"
+                            android:fontFamily="@font/normal"
+                            android:text="Fuel(Diesel)"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_24sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/normal"
+                            android:text="Refueling Date:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.6"
+                            android:fontFamily="@font/normal"
+                            android:text="12/25/2020"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_24sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/normal"
+                            android:text="Refueling Time:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.6"
+                            android:fontFamily="@font/normal"
+                            android:text="22:30:57"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_24sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/normal"
+                            android:text="Refueling Lat:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textLat"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.6"
+                            android:fontFamily="@font/normal"
+                            android:text="22.2566"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_24sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/normal"
+                            android:text="Refueling Long:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textLong"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.6"
+                            android:fontFamily="@font/normal"
+                            android:text="83.2561"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_24sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/normal"
+                            android:text="Odometer Reading:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textOdometerReading"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.6"
+                            android:fontFamily="@font/normal"
+                            android:text="1025596"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_24sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/normal"
+                            android:text="Cost/Gallon:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_Costper_gallon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.6"
+                            android:fontFamily="@font/normal"
+                            android:text="$4"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_24sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/normal"
+                            android:text="Total Cost:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_total_cost"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.6"
+                            android:fontFamily="@font/normal"
+                            android:text="$440"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_tank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_24sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/normal"
+                            android:text="Fuel Taken in Tank:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/fuel_taken_in_tank"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.6"
+                            android:fontFamily="@font/normal"
+                            android:text="15 Gallon"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_can"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_24sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/normal"
+                            android:text="Fuel Taken in Can:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_fuel_taken_can"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.6"
+                            android:fontFamily="@font/normal"
+                            android:text="5 Gallon"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_24sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/normal"
+                            android:text="Note:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_note"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.6"
+                            android:fontFamily="@font/normal"
+                            android:text="@string/dummey_lorem_ipsum"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_24sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewReceiptOrPump"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/normal"
+                            android:text="Receipt:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/bodyTextSizeSmall" />
+
+                        <com.met.atims_reporter.widget.image_view.ImageView
+                            android:id="@+id/img_receipt"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_200sdp"
+                            android:layout_weight="1.6"
+                            app:layout_constraintDimensionRatio="16:9"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:scaleType="centerCrop" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

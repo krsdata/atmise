@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="none">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+            android:id="@+id/spinnerIncidentType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"/>
+        <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+            android:id="@+id/spinnerStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"/>
+
+        <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+            android:id="@+id/spinnerEndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"/>
+
+        <com.met.atims_reporter.widget.side_by_side.spinner.SideBySideSpinner
+            android:id="@+id/spinnerIncidentTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/normal"
+            android:text="Comments"
+            android:textColor="@color/colorGrey"
+            android:textSize="@dimen/bodyTextSizeSmall" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/asterisk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_asterisk"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:background="@drawable/edit_text_multiline_bg"
+            android:fontFamily="@font/normal"
+            android:gravity="top"
+            android:hint="Type here"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:padding="8dp"
+            android:textColor="@color/textBlack"
+            android:textColorHint="@color/gray"
+            android:textCursorDrawable="@drawable/cursor_drawable_yellow"
+            android:textSize="@dimen/inputFieldTextSmall" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginLeft="@dimen/_32sdp"
+            android:layout_marginRight="@dimen/_32sdp"
+            android:layout_marginBottom="@dimen/_32sdp"
+            android:background="@drawable/button_black"
+            android:fontFamily="@font/medium"
+            android:onClick="@{}"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bodyTextSizeNormal"
+             />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
+    </RelativeLayout>
+</layout>

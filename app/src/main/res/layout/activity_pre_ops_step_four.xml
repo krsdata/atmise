@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="context"
+            type="com.met.atims_reporter.ui.pre_ops.step_four.PreOpsStepFour" />
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.add_inspection.step_four.AddInspectionStepFour">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrey3"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTotalPresent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:text="Tools Presents"
+                android:textColor="@color/green"
+                android:textSize="@dimen/bodyTextSizeSmall" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/re_tool_present"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrey3"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTotalMissing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:text="Tools Missing"
+                android:textColor="@color/colorDarkYellow"
+                android:textSize="@dimen/bodyTextSizeSmall" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/re_tool_misssing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrey3"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTotalBroken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:text="Tools Broken"
+                android:textColor="@color/red"
+                android:textSize="@dimen/bodyTextSizeSmall" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/re_tool_broken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrey3"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/_8sdp"
+                android:text="Comments"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/bodyTextSizeMedium"
+                android:textStyle="bold"
+                app:fontFamily="@font/normal" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_asterisk" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:layout_marginRight="@dimen/_6sdp"
+                android:background="@drawable/edit_text_multiline_bg"
+                android:gravity="top"
+                android:hint=""
+                android:inputType="textMultiLine"
+                android:maxLines="6"
+                android:maxLength="180"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textCursorDrawable="@drawable/cursor_drawable_yellow"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_gravity="end"
+                app:srcCompat="@drawable/ic_asterisk" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewPictureContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:cardCornerRadius="@dimen/_4sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:layout_marginRight="@dimen/_6sdp"
+                app:layout_constraintDimensionRatio="16:9">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appcompatImageViewCameraPlaceHolder1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewTakePicture1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent=".15"
+                        app:srcCompat="@drawable/ic_camera" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewTakePicture1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/normal"
+                        android:gravity="center"
+                        android:text="Tap To Take Photo"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/bodyTextSizeSmall"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appcompatImageViewCameraPlaceHolder1" />
+
+                    <com.met.atims_reporter.widget.image_view.ImageView
+                        android:id="@+id/image_camera1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:scaleType="centerCrop"
+                        android:src="@android:color/transparent"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReTakePicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/normal"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:text="@string/re_take_picture"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bodyTextSizeNormal"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_margin="@dimen/_16sdp"
+                android:background="@drawable/button_black"
+                android:fontFamily="@font/normal"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyTextSizeNormal" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+
+</layout>

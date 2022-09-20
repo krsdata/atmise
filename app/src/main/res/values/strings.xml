@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">SSP Reporter</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="pls_check_internet_con">Please check your internet connection and try again.</string>
+    <string name="pls_enter_email">Please enter your email</string>
+    <string name="invalid_email">Please enter a valid email</string>
+    <string name="invalid_user_name_or_password">Invalid email or password</string>
+    <string name="pls_enter_old_password">Please enter your old password</string>
+    <string name="pls_enter_password">Please enter your password</string>
+    <string name="pls_enter_new_password">Please enter your new password</string>
+    <string name="pls_enter_fname">Please enter your first name</string>
+    <string name="pls_enter_lname">Please enter your last name</string>
+    <string name="pls_enter_address">Please enter your address</string>
+    <string name="pls_enter_zip_code">Please enter your Zip Code</string>
+    <string name="pls_enter_valid_zip_code">Please enter a valid Zip Code</string>
+    <string name="pls_enter_phone_number">Please enter your mobile number</string>
+    <string name="mobile_validration">Mobile number should be 10 to 15 digits</string>
+    <string name="pls_confrm_passwd">Please enter confirm password</string>
+    <string name="passwd_mismatch">Password Mismatch</string>
+    <string name="pls_enter_subject">Please enter your Subject</string>
+    <string name="pls_enter_message">Please enter your Message</string>
+    <string name="is_valid_passwd">Password must be 8 characters must include 1 letter, 1 number and 1 special
+        character
+    </string>
+
+    <string name="create_an_account"><u>Create an account</u></string>
+    <string name="forgot_password_2">Forgot Password</string>
+    <string name="logout_message">Are you sure, you want to logout?</string>
+    <string name="enter_ur_registered_email">Enter your registered email</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="_yes">Yes</string>
+    <string name="_no">No</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_super">SuperActivity</string>
+    <string name="forgot_password"><u>Forgot your password ?</u></string>
+    <string name="unicode_rs">\u20B9</string>
+
+    <string name="rupeeSymbol">\u20B9</string>
+    <string name="star">\u2605</string>
+    <string name="title_activity_search_result_list">SearchResultList</string>
+    <string name="title_activity_select_room">SelectRoom</string>
+    <string name="title_activity_hotel_details">HotelDetails</string>
+    <string name="title_activity_web_view">WebView</string>
+    <string name="continue_to_pay">Continue to pay</string>
+    <string name="need_help"><u>Need help?</u></string>
+    <string name="title_activity_change_password">ChangePassword</string>
+    <string name="title_activity_faq">FAQ</string>
+
+    <string name="forgot_heading_message">We need just registered email id to send you password rest instructions.</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_activity_incident_details">IncidentDetails</string>
+    <string name="dummey_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="are_you_injured">Are You Injured?</string>
+    <string name="was_anyone">Was Anyone Else Injured?</string>
+    <string name="do_you_contact">Did You Contact TMC</string>
+    <string name="did_you_contact_your_supervisor">Did You Contact Your Supervisor?</string>
+    <string name="were_you_in_your_truck">Were You in Your Vehicle?</string>
+
+    <string name="re_take_picture">Re-Take Picture</string>
+
+    <string name="back_alert_title_txt">Back Alert!</string>
+    <string name="back_alert_txt">Leaving this page will reset the page. Do you want to back?</string>
+
+    <string name="api_key">AIzaSyCv04niY6-XFYxVK659LhmVc8JF1Y43l0U</string>
+</resources>

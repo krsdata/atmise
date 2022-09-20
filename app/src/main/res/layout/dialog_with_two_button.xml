@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:minHeight="@dimen/_120sdp"
+            android:paddingBottom="@dimen/_16sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appcompatImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:fontFamily="@font/normal"
+                android:gravity="center"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/textBlack"
+                android:textSize="@dimen/bodyTextSizeMedium"
+                app:layout_constraintBottom_toTopOf="@+id/button_action_one"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appcompatImageView" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_action_two"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:background="@drawable/dialog_button_second_bg"
+                android:fontFamily="@font/medium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/buttonTextSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/button_action_one"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintWidth_percent=".4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_action_one"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:background="@drawable/dialog_button_first_bg"
+                android:fontFamily="@font/medium"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/buttonTextSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button_action_two"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintWidth_percent=".4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

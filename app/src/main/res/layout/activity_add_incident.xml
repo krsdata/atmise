@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="context"
+            type="com.met.atims_reporter.ui.add_incident.media.AddIncidentMediaActivity" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_16sdp">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardViewPictureContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/bg_dashedborder_light_yellow"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_1sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:layout_constraintDimensionRatio="16:9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:onClick="@{()->context.initiatePictureCapture()}">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appcompatImageViewCameraPlaceHolder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewTakePicture"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent=".15"
+                        app:srcCompat="@drawable/ic_camera_yellow" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewTakePicture"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/normal"
+                        android:gravity="center"
+                        android:text="Tap To Take Photo"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/bodyTextSizeNormal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appcompatImageViewCameraPlaceHolder" />
+
+                    <RelativeLayout
+                        android:id="@+id/imageRL"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="gone">
+                        <com.met.atims_reporter.widget.image_view.ImageView
+                            android:id="@+id/image_camera"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@android:color/transparent"/>
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/reTakeIv"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:elevation="@dimen/_4sdp"
+                            app:srcCompat="@drawable/ic_camera_yellow"
+                            android:onClick="@{()->context.initiatePictureCapture()}"/>
+                    </RelativeLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardViewVideoContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/bg_dashedborder_light_yellow"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_1sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:layout_constraintDimensionRatio="16:9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardViewPictureContainer"
+                    android:onClick="@{()->context.initiateVideoCapture()}">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appcompatImageViewVideoPlaceHolder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewRecordVideo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent=".15"
+                        app:srcCompat="@drawable/ic_video" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewRecordVideo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/normal"
+                        android:gravity="center"
+                        android:text="Tap To Record 1 min Video"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/bodyTextSizeNormal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appcompatImageViewVideoPlaceHolder" />
+
+                    <RelativeLayout
+                        android:id="@+id/videoRL"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="gone">
+
+                        <com.met.atims_reporter.widget.VideoPlayer
+                            android:id="@+id/video"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/reTakeVideoIv"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:elevation="@dimen/_4sdp"
+                            app:srcCompat="@drawable/ic_video"
+                            android:onClick="@{()->context.initiateVideoCapture()}"/>
+                    </RelativeLayout>
+                    <!--<com.met.atims_reporter.widget.VideoPlayer
+                        android:id="@+id/video"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/normal"
+                android:text="Notes"
+                android:textColor="@color/colorGrey"
+                android:textSize="@dimen/bodyTextSizeSmall"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewVideoContainer" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/asterisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextNotes"
+                app:layout_constraintStart_toEndOf="@id/textViewNotes"
+                app:srcCompat="@drawable/ic_asterisk" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextNotes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/edit_text_multiline_bg"
+                android:fontFamily="@font/normal"
+                android:gravity="top"
+                android:hint="Type here"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:padding="8dp"
+                android:textColor="@color/textBlack"
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@drawable/cursor_drawable_yellow"
+                android:textSize="@dimen/inputFieldTextSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNotes" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonSubmit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/button_black"
+                android:fontFamily="@font/medium"
+                android:onClick="@{()->context.processFinished()}"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyTextSizeNormal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNotes" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

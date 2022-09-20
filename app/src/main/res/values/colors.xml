@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFC405</color>
+    <color name="colorPrimaryDark">#FFC405</color>
+    <color name="colorAccent">#EEA30A</color>
+    <color name="borderColor">#DABB2C</color>
+    <color name="textBlack">#535353</color>
+    <color name="offWhite">#F1F1F1</color>
+    <color name="black">#000000</color>
+    <color name="textBlackHint">#9B9B9B</color>
+    <color name="gray">#B4B3B3</color>
+    <color name="white">#FFFFFF</color>
+    <color name="navTextColor">#727272</color>
+    <color name="expndCardColor">#FEFBEF</color>
+    <color name="green">#24B233</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF5722</color>
+    <color name="colorYellow">#FBD123</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="colorBlue">#60B9B3</color>
+
+        <!--New Colors-->
+    <color name="colorNewYellow">#FFC405</color>
+    <color name="colorLightYellow">#FFE68F</color>
+    <color name="colorGrey">#737373</color>
+    <color name="colorDarkYellow">#E5AF00</color>
+    <color name="colorLightYellow2">#FFFBEE</color>
+    <color name="colorGrey2">#BABABA</color>
+    <color name="colorGrey3">#858585</color>
+    <color name="colorYellow3">#FFE076</color>
+</resources>
